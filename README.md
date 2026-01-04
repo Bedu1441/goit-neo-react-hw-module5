@@ -1,16 +1,98 @@
-# React + Vite
+# goit-neo-react-hw-module5 — Movie Search (Routing)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React app with routing for searching movies by title using TMDB API.
 
-Currently, two official plugins are available:
+## Links (add before submit)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- GitHub repo: https://github.com/Bedu1441/goit-neo-react-hw-module5
+- Vercel live page: <PASTE_YOUR_VERCEL_LINK_HERE>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requirements checklist (GoIT)
 
-## Expanding the ESLint configuration
+- Project created with **Vite**
+- No errors/warnings in console on start
+- **React Router** used for navigation
+- Code splitting using **React.lazy** + **Suspense**
+- Styling via **CSS Modules**
+- Folder structure:
+  - `src/components/<ComponentName>/<ComponentName>.jsx` + `<ComponentName>.module.css`
+  - `src/pages/<PageName>/<PageName>.jsx` + `<PageName>.module.css`
+- Default export for all components: `export default`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## App Routes
+
+- `/` — **HomePage**: trending movies (TMDB Trending)
+- `/movies` — **MoviesPage**: search movies by keyword (TMDB Search)
+- `/movies/:movieId` — **MovieDetailsPage**: movie details (TMDB Movie Details)
+  - `/movies/:movieId/cast` — **MovieCast**: cast info (TMDB Credits)
+  - `/movies/:movieId/reviews` — **MovieReviews**: reviews (TMDB Reviews)
+- `*` — **NotFoundPage** with Link to Home
+
+---
+
+## TMDB API setup
+
+This project uses **TMDB API Read Access Token**.
+
+Create `.env` in project root:
+
+```env
+VITE_TMDB_TOKEN=PASTE_YOUR_API_READ_ACCESS_TOKEN_HERE
+VITE_TMDB_BASE=https://api.themoviedb.org/3
+Token is sent in every request in the Authorization: Bearer <token> header.
+
+Images
+
+TMDB returns only a file path (example):
+/1E5baAaEse26fej7uHcjOgEE2t2.jpg
+
+Full URL is formed like:
+https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
+
+Run locally
+
+Install dependencies:
+
+npm install
+
+Start dev server:
+npm run dev
+
+Build:
+npm run build
+
+Preview build:
+npm run preview
+
+Main features (what to check)
+HomePage loads trending movies on mount (useEffect)
+MoviesPage:
+uses useSearchParams
+submit updates query param
+useEffect loads movies when query changes
+MovieList:
+renders Link to /movies/:movieId
+passes state={location} using useLocation
+MovieDetailsPage:
+uses useParams to get movieId
+loads details on movieId change
+nested navigation: cast and reviews
+has Outlet for nested routes
+Go back returns to previous page via useRef(location.state) or fallback to /movies
+MovieCast / MovieReviews:
+load data by movieId
+show message if no data
+
+Deploy (Vercel)
+Import repo in Vercel
+Framework: Vite
+Build command: npm run build
+Output directory: dist
+Add Environment Variables:
+VITE_TMDB_TOKEN
+VITE_TMDB_BASE (optional)
+```
