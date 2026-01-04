@@ -2,10 +2,10 @@
 
 React app with routing for searching movies by title using TMDB API.
 
-## Links (add before submit)
+## Links
 
 - GitHub repo: https://github.com/Bedu1441/goit-neo-react-hw-module5
-- Vercel live page: <PASTE_YOUR_VERCEL_LINK_HERE>
+- Vercel live page: https://goit-neo-react-hw-module5-jz28zv4el-bogdans-projects-37132a66.vercel.app/
 
 ---
 
@@ -20,7 +20,6 @@ React app with routing for searching movies by title using TMDB API.
   - `src/components/<ComponentName>/<ComponentName>.jsx` + `<ComponentName>.module.css`
   - `src/pages/<PageName>/<PageName>.jsx` + `<PageName>.module.css`
 - Default export for all components: `export default`
-
 ---
 
 ## App Routes
@@ -31,7 +30,6 @@ React app with routing for searching movies by title using TMDB API.
   - `/movies/:movieId/cast` — **MovieCast**: cast info (TMDB Credits)
   - `/movies/:movieId/reviews` — **MovieReviews**: reviews (TMDB Reviews)
 - `*` — **NotFoundPage** with Link to Home
-
 ---
 
 ## TMDB API setup
