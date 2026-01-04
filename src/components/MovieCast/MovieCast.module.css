@@ -1,0 +1,42 @@
+.list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.noImg {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 1px dashed #9ca3af;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+}
+
+.name {
+  margin: 8px 0 0;
+  font-weight: 700;
+}
+
+.role {
+  margin: 4px 0 0;
+  color: #374151;
+}
+
+.error {
+  color: #b91c1c;
+}

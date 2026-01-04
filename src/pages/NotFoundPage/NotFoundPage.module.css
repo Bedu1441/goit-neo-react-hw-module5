@@ -1,0 +1,14 @@
+.section {
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.link {
+  width: fit-content;
+  text-decoration: none;
+  color: #2563eb;
+}

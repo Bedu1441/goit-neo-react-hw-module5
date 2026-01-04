@@ -1,0 +1,32 @@
+.section {
+  display: grid;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  min-width: 260px;
+}
+
+.button {
+  padding: 8px 12px;
+  border: 1px solid #111827;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.error {
+  color: #b91c1c;
+}

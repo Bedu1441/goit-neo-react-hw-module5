@@ -1,0 +1,80 @@
+.section {
+  display: grid;
+  gap: 12px;
+}
+
+.back {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.poster {
+  width: 220px;
+  border-radius: 8px;
+}
+
+.noPoster {
+  width: 220px;
+  height: 330px;
+  border: 1px dashed #9ca3af;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #6b7280;
+}
+
+.info {
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+}
+
+.text {
+  margin: 0;
+}
+
+.extra {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.subnav {
+  display: flex;
+  gap: 12px;
+}
+
+.sublink {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+}
+
+.sublink:hover {
+  text-decoration: underline;
+}
+
+.outlet {
+  padding: 10px 0;
+}
